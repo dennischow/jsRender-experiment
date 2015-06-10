@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- To run the current sample code in your own environment, copy this to an html page. -->
+
+<html>
+<head>
+<!-- <base href="http://www.jsviews.com/samples/"> -->
+
+<!-- App Stylesheet -->
+<link href="assets/css/app.css" media="screen" type="text/css" rel="stylesheet"></link>
+
+<!-- <link href="samples.css" rel="stylesheet"/> -->
+<script src="assets/libs/jquery-1.11.3.js"></script>
+<script src="assets/libs/jsviews.js"></script>
+</head>
+
+<body>
+<!-- Page View Starts -->
+<div class="page-view">
+	<div id="peopleList"></div>
+	<div id="blogList"></div>
+</div>
+<!-- Page View Ends -->
+
+
+<!-- Render Templates -->
+<script id="personTmpl" type="text/x-jsrender">
+	<li>
+		Name : {{:name}}<br>
+		Age : {{:age}}<br>
+		Birthday: {{:birthday.d}}/{{:birthday.m}}/{{:birthday.y}}
+	</li>
+</script>
+
+<script id="blogTmpl" type="text/x-jsrender">
+	<li>
+		Title : {{:title}}<br>
+		Related : {{for related_post}} {{:#index >}} {{/for}}
+	</li>
+</script>
+
+<!-- App SCript -->
+<script src="assets/js/app.js"></script>
+</body>
+</html>
